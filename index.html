@@ -1,68 +1,46 @@
-<!-- index.html -->
+<!-- index.html (place at project root) -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Naruto Blazing – Title</title>
+  <title>Naruto Blazing - Title</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/title.css" />
 </head>
 <body>
-  <div class="game-wrapper">
-    <div class="game-viewport">
-      <!-- Background -->
-      <img
-        src="assets/ui/title/title-bg.png"
-        alt="Title Background"
-        class="title-bg"
-      />
+  <div class="game-shell">
+    <div class="game-frame">
+      <!-- Background art -->
+      <div class="title-bg" aria-hidden="true"></div>
 
-      <!-- Top buttons -->
-      <button class="title-btn delete-cache" type="button">
-        <img src="assets/title/delete_cache.png" alt="Delete Cache" />
-      </button>
+      <!-- Top UI -->
+      <div class="top-ui">
+        <div class="top-left-buttons">
+          <button class="ui-btn brown-btn">Delete Cache</button>
+          <button class="ui-btn brown-btn">Data Transfer</button>
+        </div>
 
-      <button class="title-btn data-transfer" type="button">
-        <img src="assets/title/data_transfer.png" alt="Data Transfer" />
-      </button>
-
-      <!-- Vendor logos -->
-      <div class="vendor-logos">
-        <img src="assets/title/criware.png" alt="CRIWARE" />
-        <img src="assets/title/bandai.png" alt="Bandai Namco" />
-        <img src="assets/title/gree.png" alt="GREE" />
+        <div class="top-right-logos">
+          <!-- Swap these for your real logo assets -->
+          <img src="assets/ui/title/criware.png" alt="CRIWARE" />
+          <img src="assets/ui/title/bandai.png" alt="Bandai Namco" />
+          <img src="assets/ui/title/gree.png" alt="GREE" />
+        </div>
       </div>
 
-      <!-- Tap to Start (image button) -->
-      <button class="tap-to-start-button" type="button">
-        <img
-          src="assets/ui/title/taptostart.png"
-          alt="Tap To Start"
-        />
-      </button>
-
-      <!-- Promo banner at bottom -->
-      <div class="promo-banner">
-        <img src="assets/title/promo_banner.png" alt="Promo" />
-      </div>
+      <!-- Tap To Start hitbox using sprite -->
+      <button
+        id="tapStart"
+        class="tap-to-start-button"
+        aria-label="Tap To Start"
+      ></button>
     </div>
   </div>
 
   <script>
-    // Simple interaction for Tap To Start
-    document.addEventListener("DOMContentLoaded", () => {
-      const tapBtn = document.querySelector(".tap-to-start-button");
-      if (!tapBtn) return;
-
-      tapBtn.addEventListener("click", () => {
-        tapBtn.classList.add("pressed");
-
-        // Small delay for press animation
-        setTimeout(() => {
-          // TODO: change this to your real next page
-          window.location.href = "village.html";
-        }, 200);
-      });
+    document.getElementById('tapStart').addEventListener('click', () => {
+      // Change to whatever page you want after title
+      window.location.href = 'village.html';
     });
   </script>
 </body>
