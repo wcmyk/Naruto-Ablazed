@@ -1,0 +1,118 @@
+/* ===== GLOBAL RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #000; /* Letterboxing color */
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100vw;
+  height: 100vh;
+}
+
+/* ===== FIXED BLAZING MOBILE VIEWPORT ===== */
+#game-container {
+  width: 720px;
+  height: 1280px;
+  position: relative;
+
+  /* Main scaling behavior */
+  transform-origin: top center;
+}
+
+/* Auto-scale based on height */
+@media (max-height: 1280px) {
+  #game-container {
+    transform: scale(calc(100vh / 1280));
+  }
+}
+
+/* Auto-scale based on width */
+@media (max-width: 720px) {
+  #game-container {
+    transform: scale(calc(100vw / 720));
+  }
+}
+
+/* ===== TITLE SCREEN BACKGROUND ===== */
+#title-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 720px;
+  height: 1280px;
+  object-fit: cover;
+}
+
+/* ===== TAP TO START ===== */
+#tap-to-start {
+  position: absolute;
+  bottom: 300px;
+  width: 100%;
+  text-align: center;
+  color: #f5d37a;
+  font-size: 48px;
+  font-family: 'Times New Roman', serif;
+  text-shadow: 3px 3px 5px #000;
+  animation: pulse 1.2s infinite;
+}
+
+/* Tap to start animation */
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.3; }
+  100% { opacity: 1; }
+}
+
+/* ===== LOGOS (CRIWARE, BANDAI, GREE) ===== */
+.logo-row {
+  position: absolute;
+  top: 40px;
+  right: 30px;
+  display: flex;
+  gap: 10px;
+}
+
+.logo-row img {
+  height: 40px;
+}
+
+/* ===== DELETE CACHE + DATA TRANSFER BUTTONS ===== */
+.top-buttons {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  display: flex;
+  gap: 20px;
+}
+
+.top-buttons button {
+  padding: 10px 20px;
+  background: #6a2500;
+  border: 3px solid #ffae40;
+  border-radius: 8px;
+  color: #ffd791;
+  font-size: 24px;
+  font-weight: bold;
+  box-shadow: 0px 0px 10px #000;
+}
+
+/* ===== VERSION & USER ID TEXT ===== */
+.version-info {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  color: #fff;
+  font-size: 22px;
+  text-shadow: 2px 2px 4px #000;
+}
