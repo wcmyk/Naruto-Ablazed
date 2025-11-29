@@ -105,40 +105,34 @@ body {
 
 .tap-to-start-button {
   position: absolute;
-
-  /* Your “perfect” alignment values */
-  left: 49%;
-  bottom: 21.5%;
-  transform: translateX(55%);
-
-  width: 45%;
-  height: 8%;
-
+  left: 0%;
+  bottom: 12%;
+  transform: translateX(50%);
+  width: 47%;
+  height: 30%;
   background: url("../assets/ui/title/taptostart.png") center / contain
     no-repeat;
   border: none;
   padding: 0;
   cursor: pointer;
   outline: none;
-
   font-size: 0;       /* hide any text */
   color: transparent; /* purely sprite-based */
-
   animation: tapPulse 1.1s ease-in-out infinite;
 }
 
 /* Pulse animation for tap to start */
 @keyframes tapPulse {
   0% {
-    transform: translateX(55%) scale(1);
+    transform: translateX(50%) scale(1);
     filter: drop-shadow(0 0 0px rgba(255, 255, 255, 0.4));
   }
   50% {
-    transform: translateX(55%) scale(1.05);
+    transform: translateX(50%) scale(1.05);
     filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.9));
   }
   100% {
-    transform: translateX(55%) scale(1);
+    transform: translateX(50%) scale(1);
     filter: drop-shadow(0 0 0px rgba(255, 255, 255, 0.4));
   }
 }
