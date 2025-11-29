@@ -1,11 +1,20 @@
 body {
   margin: 0;
-  overflow: hidden;
-  background: url('../assets/ui/backgrounds/village_bg.png');
-  background-size: cover;
-  width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.35) 40%, rgba(0, 0, 0, 0.75) 100%),
+    url('../assets/ui/backgrounds/village_bg.png') center top / cover no-repeat,
+    #0c1018;
   font-family: "Helvetica Neue", sans-serif;
+  color: white;
+}
+
+.main-container {
+  position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
+  min-height: 100vh;
+  padding: 12px 0 72px;
+  box-sizing: border-box;
 }
 
 /* ----------- TOP HUD ----------- */
@@ -15,6 +24,7 @@ body {
   top: 0;
   padding: 10px 0;
   text-align: center;
+  z-index: 2;
 }
 
 .hud-row {
@@ -100,6 +110,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  z-index: 2;
 }
 
 .side-btn img {
@@ -113,6 +124,7 @@ body {
   top: 220px;
   display: flex;
   justify-content: center;
+  z-index: 1;
 }
 
 .character-display img {
@@ -142,6 +154,7 @@ body {
   display: flex;
   justify-content: space-around;
   padding: 12px 0;
+  z-index: 2;
 }
 
 .menu-btn {
@@ -156,4 +169,86 @@ body {
 
 .menu-btn img {
   width: 55px;
+}
+
+/* ----------- MOBILE LAYOUT ----------- */
+@media (max-width: 768px) {
+  body {
+    background-position: center;
+  }
+
+  .main-container {
+    padding: 16px 12px 90px;
+  }
+
+  .top-hud {
+    position: sticky;
+    top: 0;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(4px);
+  }
+
+  .hud-row {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  #username {
+    font-size: 18px;
+  }
+
+  .hud-icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .bar {
+    height: 14px;
+  }
+
+  .side-buttons {
+    position: fixed;
+    top: 90px;
+    right: 8px;
+    gap: 6px;
+    transform: scale(0.9);
+  }
+
+  .side-btn img {
+    width: 96px;
+  }
+
+  .character-display {
+    position: relative;
+    margin-top: 40px;
+  }
+
+  .character-display img {
+    width: min(70vw, 320px);
+  }
+
+  .callout-banner img {
+    width: 100%;
+    margin: 40px auto 0;
+  }
+
+  .join-btn img {
+    width: 220px;
+    margin: 16px auto;
+  }
+
+  .bottom-menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 10px 6px;
+  }
+
+  .menu-btn img {
+    width: 42px;
+  }
+
+  .menu-btn span {
+    font-size: 12px;
+  }
 }

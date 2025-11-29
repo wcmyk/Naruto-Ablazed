@@ -10,74 +10,77 @@
 </head>
 <body>
 
-<!-- ======================== TOP HUD ======================== -->
-<div class="top-hud">
+<div class="main-container">
+  <!-- ======================== TOP HUD ======================== -->
+  <div class="top-hud">
 
-  <div class="hud-row">
-    <div class="hud-left">
-      <img src="assets/ui/hud/ryo_icon.png" class="hud-icon">
-      <span id="ryo-amount">0</span>
+    <div class="hud-row">
+      <div class="hud-left">
+        <img src="assets/ui/hud/ryo_icon.png" class="hud-icon">
+        <span id="ryo-amount">0</span>
+      </div>
+
+      <div class="hud-center">
+        <div id="username">Player</div>
+        <div id="ninja-rank">Rank 1</div>
+      </div>
+
+      <div class="hud-right">
+        <img src="assets/ui/hud/pearl_icon.png" class="hud-icon">
+        <span id="pearl-amount">0</span>
+        <button id="buy-pearls" class="plus-btn">+</button>
+      </div>
     </div>
 
-    <div class="hud-center">
-      <div id="username">Player</div>
-      <div id="ninja-rank">Rank 1</div>
+    <div class="hud-bars">
+      <div class="bar">
+        <div class="bar-label">HP</div>
+        <div class="bar-fill" id="hp-bar"></div>
+      </div>
+
+      <div class="bar">
+        <div class="bar-label">XP</div>
+        <div class="bar-fill xp" id="xp-bar"></div>
+      </div>
     </div>
 
-    <div class="hud-right">
-      <img src="assets/ui/hud/pearl_icon.png" class="hud-icon">
-      <span id="pearl-amount">0</span>
-      <button id="buy-pearls" class="plus-btn">+</button>
-    </div>
   </div>
 
-  <div class="hud-bars">
-    <div class="bar">
-      <div class="bar-label">HP</div>
-      <div class="bar-fill" id="hp-bar"></div>
-    </div>
 
-    <div class="bar">
-      <div class="bar-label">XP</div>
-      <div class="bar-fill xp" id="xp-bar"></div>
-    </div>
+  <!-- ======================== RIGHT BUTTONS ======================== -->
+  <div class="side-buttons">
+    <button class="side-btn"><img src="assets/ui/buttons/present.png"></button>
+    <button class="side-btn"><img src="assets/ui/buttons/notice.png"></button>
+    <button class="side-btn"><img src="assets/ui/buttons/ninja_trial.png"></button>
   </div>
 
-</div>
+
+  <!-- ======================== CHARACTER SLOT ======================== -->
+  <div class="character-display">
+    <img id="character-art" src="assets/characters/example/full.png">
+  </div>
 
 
-<!-- ======================== RIGHT BUTTONS ======================== -->
-<div class="side-buttons">
-  <button class="side-btn"><img src="assets/ui/buttons/present.png"></button>
-  <button class="side-btn"><img src="assets/ui/buttons/notice.png"></button>
-  <button class="side-btn"><img src="assets/ui/buttons/ninja_trial.png"></button>
-</div>
+  <!-- ======================== MAIN BANNERS ======================== -->
+  <div class="callout-banner">
+    <img src="assets/ui/banners/example_scroll.png">
+  </div>
+
+  <button id="join-multiplayer" class="join-btn">
+    <img src="assets/ui/buttons/join_multiplayer.png">
+  </button>
 
 
-<!-- ======================== CHARACTER SLOT ======================== -->
-<div class="character-display">
-  <img id="character-art" src="assets/characters/example/full.png">
-</div>
+  <!-- ======================== BOTTOM MENU ======================== -->
+  <div class="bottom-menu">
+    <button class="menu-btn"><img src="assets/ui/menu/village.png"><span>Village</span></button>
+    <button class="menu-btn"><img src="assets/ui/menu/teams.png"><span>Teams</span></button>
+    <button class="menu-btn"><img src="assets/ui/menu/summon.png"><span>Summon</span></button>
+    <button class="menu-btn"><img src="assets/ui/menu/shop.png"><span>Shop</span></button>
+    <button class="menu-btn"><img src="assets/ui/menu/friends.png"><span>Friends</span></button>
+    <button class="menu-btn"><img src="assets/ui/menu/other.png"><span>Other</span></button>
+  </div>
 
-
-<!-- ======================== MAIN BANNERS ======================== -->
-<div class="callout-banner">
-  <img src="assets/ui/banners/example_scroll.png">
-</div>
-
-<button id="join-multiplayer" class="join-btn">
-  <img src="assets/ui/buttons/join_multiplayer.png">
-</button>
-
-
-<!-- ======================== BOTTOM MENU ======================== -->
-<div class="bottom-menu">
-  <button class="menu-btn"><img src="assets/ui/menu/village.png"><span>Village</span></button>
-  <button class="menu-btn"><img src="assets/ui/menu/teams.png"><span>Teams</span></button>
-  <button class="menu-btn"><img src="assets/ui/menu/summon.png"><span>Summon</span></button>
-  <button class="menu-btn"><img src="assets/ui/menu/shop.png"><span>Shop</span></button>
-  <button class="menu-btn"><img src="assets/ui/menu/friends.png"><span>Friends</span></button>
-  <button class="menu-btn"><img src="assets/ui/menu/other.png"><span>Other</span></button>
 </div>
 
 
