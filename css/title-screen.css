@@ -1,0 +1,115 @@
+/* ============================
+    Title Screen Styling
+=============================*/
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100%;
+  font-family: 'Cinzel', serif;
+}
+
+#title-bg {
+  position: fixed;
+  inset: 0;
+  background-image: url("../assets/ui/title/title-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+/* Top Row */
+.top-buttons {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ts-btn {
+  background: linear-gradient(180deg, #6d3924, #4a1d0f);
+  border: 2px solid #c89a64;
+  border-radius: 6px;
+  padding: 8px 14px;
+  color: #ffd7a1;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+  text-shadow: 2px 2px 2px #000;
+}
+
+.ts-btn:hover {
+  filter: brightness(1.2);
+}
+
+.logo-row {
+  margin-left: auto;
+  display: flex;
+  gap: 12px;
+}
+
+.logo-row img {
+  height: 32px;
+}
+
+/* Game Logo */
+#game-logo {
+  position: absolute;
+  bottom: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 380px;
+  filter: drop-shadow(0 0 15px black);
+}
+
+/* Tap To Start */
+#tap-to-start {
+  position: absolute;
+  bottom: 160px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 32px;
+  color: #ffe08a;
+  font-weight: 900;
+  text-shadow: 3px 3px 3px black;
+
+  animation: blink 1.2s infinite alternate ease-in-out;
+}
+
+@keyframes blink {
+  from { opacity: 0.3; }
+  to   { opacity: 1; }
+}
+
+/* Promo Section */
+#promo-banner {
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#promo-banner img {
+  width: 320px;
+  border-radius: 6px;
+  box-shadow: 0 0 12px #000;
+}
+
+/* Bottom Info */
+#bottom-info {
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  right: 20px;
+
+  display: flex;
+  justify-content: space-between;
+  color: #ccc;
+  font-size: 12px;
+  text-shadow: 2px 2px 2px black;
+}
