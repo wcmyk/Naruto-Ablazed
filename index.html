@@ -1,0 +1,61 @@
+<!-- ============================
+      index.html  
+      Naruto Blazing Title Screen
+===============================-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Naruto Blazing - Title Screen</title>
+
+  <link rel="stylesheet" href="css/title-screen.css" />
+</head>
+
+<body>
+
+  <!-- Fullscreen Background -->
+  <div id="title-bg"></div>
+
+  <!-- Top Buttons -->
+  <div class="top-buttons">
+    <button class="ts-btn" id="btn-cache">Delete Cache</button>
+    <button class="ts-btn" id="btn-data">Data Transfer</button>
+
+    <div class="logo-row">
+      <img src="assets/ui/logos/criware.png" alt="Criware" />
+      <img src="assets/ui/logos/bandai.png" alt="Bandai Namco" />
+      <img src="assets/ui/logos/gree.png" alt="Gree" />
+    </div>
+  </div>
+
+  <!-- Tap to Start -->
+  <div id="tap-to-start">Tap To Start</div>
+
+  <!-- Game Logo -->
+  <img id="game-logo" src="assets/ui/title/logo.png" alt="Game Logo" />
+
+  <!-- Promo Banner -->
+  <div id="promo-banner">
+    <img src="assets/ui/title/promo.png" alt="Promo" />
+  </div>
+
+  <!-- Bottom Info -->
+  <div id="bottom-info">
+    <div id="copyright">
+      ©2002 MASASHI KISHIMOTO / 2007 SHIPPUDEN  
+      ©GREE, Inc.  
+      ©2016 BANDAI NAMCO Entertainment Inc.
+    </div>
+
+    <div id="user-info">
+      User ID: <span id="user-id">000000000000</span><br />
+      Version 1.0.0
+    </div>
+  </div>
+
+  <!-- Load JS -->
+  <script src="js/title-screen.js"></script>
+
+</body>
+</html>
