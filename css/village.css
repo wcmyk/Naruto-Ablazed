@@ -248,7 +248,16 @@ body {
     width: 42px;
   }
 
-  .menu-btn span {
-    font-size: 12px;
-  }
+.menu-btn span {
+  font-size: 12px;
+}
+}
+
+/* ----------- FALLBACK PLACEHOLDERS ----------- */
+img.placeholder-img {
+  object-fit: contain;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.12), transparent 55%),
+    linear-gradient(135deg, rgba(14,165,233,0.35), rgba(14,165,233,0));
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.08);
 }
